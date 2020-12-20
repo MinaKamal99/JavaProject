@@ -34,7 +34,8 @@
             <Cursor fx:constant="NONE" />
          </cursor>
       </Text>
-      <Button fx:id="cancleBtn" layoutX="172.0" layoutY="333.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" text="cancle" />
+      <Button fx:id="cancleBtn" layoutX="172.0" layoutY="333.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" text="cancel" />
       <Button fx:id="registerBtn" layoutX="317.0" layoutY="333.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="95.0" text="Register" wrapText="true" />
+      <Button fx:id="backBtn" layoutX="24.0" layoutY="25.0" mnemonicParsing="false" text="Back" />
    </children>
 </Pane>
