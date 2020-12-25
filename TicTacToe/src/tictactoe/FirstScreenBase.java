@@ -182,6 +182,12 @@ public class FirstScreenBase extends GridPane {
             Scene scene = new Scene(newRoot);
             stage.setScene(scene);
         });
+         SingleBtn.setOnAction((event) -> {
+           
+            Parent newRoot = new GameBase(stage);
+            Scene scene = new Scene(newRoot);
+            stage.setScene(scene);
+        });
         offlineBtn.setOnAction((event) -> {
             Parent newRoot = new MultiOfflineBase(stage);
             Scene scene = new Scene(newRoot);

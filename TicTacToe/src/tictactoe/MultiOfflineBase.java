@@ -22,7 +22,9 @@ public class MultiOfflineBase extends Pane {
     protected final Button backBtn;
     protected final Label label;
     Stage stage;
-
+     static boolean Multiplayer=false;
+     static String p1;
+       static String p2;     
     public MultiOfflineBase(Stage s) {
         stage = s;
         text = new Text();
@@ -34,7 +36,8 @@ public class MultiOfflineBase extends Pane {
         text2 = new Text();
         backBtn = new Button();
         label = new Label();
-
+        
+        
         setMaxHeight(USE_PREF_SIZE);
         setMaxWidth(USE_PREF_SIZE);
         setMinHeight(USE_PREF_SIZE);
@@ -111,6 +114,14 @@ public class MultiOfflineBase extends Pane {
         getChildren().add(label);
         backBtn.setOnAction((event) -> {
             Parent newRoot = new FirstScreenBase(stage);
+            Scene scene = new Scene(newRoot);
+            stage.setScene(scene);
+        });
+        GoBtn.setOnAction((event) -> {
+            Multiplayer=true;
+            p1=player1NameText.getText().toString();
+            p2=player2NameText.getText().toString();
+            Parent newRoot = new GameBase(stage);
             Scene scene = new Scene(newRoot);
             stage.setScene(scene);
         });
